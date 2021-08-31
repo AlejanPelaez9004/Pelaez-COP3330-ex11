@@ -8,10 +8,12 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args)
     {
-        System.out.print("What is your name?");
+        System.out.print("How many euros are you exchanging? ");
         Scanner input = new Scanner(System.in);
-        String name = input.next();
-        System.out.print("Hello " + name + ", nice to meet you!");
-        System.out.print("\n");
+        float euros = input.nextFloat();
+        System.out.print("What is the exchange rate? ");
+        float exRate = input.nextFloat();
+        float usDollars = euros * exRate;
+        System.out.printf("%.0f euros at an exchange rate of %.4f is\n%.2f U.S dollars.\n", euros, exRate, usDollars);
     }
 }
